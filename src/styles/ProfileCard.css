@@ -1,0 +1,28 @@
+.profile-card .profile-image {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+  
+  .profile-card h2 {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+  }
+  
+  .profile-card p {
+    font-size: 1em;
+    margin: 5px 0;
+  }
+  
+  .social-stats {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+  }
+  
+  .social-stats span {
+    font-size: 0.9em;
+  }
+  
