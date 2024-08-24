@@ -36,12 +36,21 @@ export const getRequest = async (url, params = {}) => {
 export const postRequest = async (url, data) => {
   try {
     const response = await API.post(url, data);
-    return response.data;
+    return response.data;  // Return response.data to get the actual data from the API
   } catch (error) {
     console.error('API POST request error:', error);
-    throw error.response.data;
+
+    // Ensure you return or throw the error to handle it properly in the calling function
+    if (error.response) {
+      throw error.response.data;  // Server responded with a status code outside the 2xx range
+    } else if (error.request) {
+      throw new Error('No response received from the server');  // Request was made, but no response was received
+    } else {
+      throw new Error(error.message);  // Something else happened while setting up the request
+    }
   }
 };
+
 
 // Function to handle PUT requests
 export const putRequest = async (url, data) => {
