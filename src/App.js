@@ -8,8 +8,12 @@ import Register from './pages/Register';
 import VanityPage from './pages/VanityPage';
 import Dashboard from './pages/Dashboard';
 import Profile from './pages/Profile';
+import Timeline from './components/Timeline';
+import Statistics from './components/Statistics';
+import AdminManagement from './components/AdminManagement';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import './styles/Global.css';
 
 function App() {
   return (
@@ -24,6 +28,9 @@ function App() {
         <Route path="/vanity/:username" element={<VanityPage />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/timeline" element={<Timeline />} />
+        <Route path="/statistics" element={<Statistics />} />
+        <Route path="/admin-management" element={<AdminManagement />} />
       </Routes>
       <Footer />
     </>
@@ -31,8 +38,4 @@ function App() {
 }
 
 export default App;
-
-
-
-
 

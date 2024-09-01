@@ -1,3 +1,39 @@
+/* CSS Variables */
+:root {
+  --primary-color: #2196f3;
+  --secondary-color: #1976d2;
+  --background-color: #f0f2f5;
+  --text-color: #333;
+  --card-background: #ffffff;
+  --border-color: #ccc;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --hover-shadow-color: rgba(0, 0, 0, 0.2);
+  --font-family: 'Arial', sans-serif;
+}
+
+/* Apply CSS Variables */
+body {
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2 {
+  color: var(--text-color);
+}
+
+/* Form Styles */
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  background: var(--card-background);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px var(--shadow-color);
+}
+
 .App {
   text-align: center;
 }
